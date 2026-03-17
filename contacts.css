@@ -1,0 +1,176 @@
+/* === Contact Section === */
+.contact-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* === Left Side: Form === */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: border-color 0.2s;
+  height: 48px;              /* ✅ same height for all input fields */
+  box-sizing: border-box;    /* ✅ keeps consistent sizing */
+}
+
+/* Keep message box larger for writing */
+.contact-form textarea {
+  height: auto;              /* ✅ allows multi-line typing */
+  min-height: 120px;
+}
+
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #f8aa1a;
+  outline: none;
+}
+
+.contact-form button {
+  background: #f8aa1a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  width: fit-content;
+}
+
+.contact-form button:hover {
+  background: #e19600;
+}
+
+/* === Right Side: Info Box === */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.contact-info strong {
+  color: #6a4a00;
+}
+
+.contact-info .info-box {
+  background: #f7f7f7;
+  margin: 15px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.contact-info a {
+  color: #f8aa1a;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form button {
+    align-self: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+.map-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.map-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+}
+
+/* Contact page image banner */
+.contact-image img {
+  width: 100%;
+  height: 400px;             /* about 3 inches tall */
+  object-fit: contain;       /* ✅ shows the full, original photo */
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;    /* ✅ fills empty space (no black bars) */
+}
+
+/* Optional: make it shorter on mobile */
+@media (max-width: 768px) {
+  .contact-image img {
+    height: 250px;
+    object-fit: contain;
+  }
+}
+
+/* Remove unwanted space between the image and contact section */
+.contact-image {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+.contact-section {
+  margin-top: 0;
+  padding-top: 20px;   /* reduce space — adjust this if needed */
+}
+
